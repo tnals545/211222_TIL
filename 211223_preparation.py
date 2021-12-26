@@ -19,3 +19,32 @@ print("\"C:\Windows\"") # "" 이것도 출력되야 하는줄..   출력값 : "C
 # 다음 코드를 실행해보고 \t와 \n의 역할을 설명해보세요.
 print("안녕하세요.\n만나서\t\t반갑습니다.") # \n은 줄바꿈, \t는 탭? 인거같다.
 # 해설 : \t는 탭을 의미하고 \n'은 줄바꿈을 의미합니다.
+
+# 006 print 여러 데이터 출력
+# print 함수에 두 개의 단어를 입력한 예제입니다. 아래 코드의 출력 결과를 예상해봅시다.
+print ("오늘은", "일요일") # 오늘은 일요일
+# 해설 : 여러 값을 출력하려면 print 함수에서 쉼표로 구분해주면 됩니다. 따라서 오늘은 다음에 공백이 하나 있고 일요일이 출력됩니다.
+
+# 007 print 기초
+# print() 함수를 사용하여 다음과 같이 출력하세요.
+# naver;kakao;sk;samsung
+print('naver;'+'kakao;'+'sk;'+'samsung')
+# 해설 : print 함수의 sep 인자로 ";"를 입력하면 출력되는 값들 사이에 한 칸의 공백대신 세미콜론이 출력됩니다.
+# print("naver", "kakao", "samsung", sep=";")
+
+# 008 print 기초
+# print() 함수를 사용하여 다음과 같이 출력하세요.
+# naver/kakao/sk/samsung
+print('naver', 'kakao', 'sk', 'samsung', sep='/')
+# 해설 : print("naver", "kakao", "samsung", sep="/")
+
+# 009 print 줄바꿈
+# 다음 코드를 수정하여 줄바꿈이 없이 출력하세요. (힌트: end='') print 함수는 두 번 사용합니다. 세미콜론 (;)은 한줄에 여러 개의 명령을 작성하기 위해 사용합니다.
+print("first", end=" ");print("second") # first second
+# 해설 : print("first", end=""); print("second") # firstsecond
+
+# 010 연산 결과 출력
+# 5/3의 결과를 화면에 출력하세요.
+print(5/3) # 1.6666666666666667
+# 해설 : 출력하고 싶은 값을 print 함수의 인자로 적어주면 됩니다.
+# print(5/3)
