@@ -102,3 +102,50 @@ print(s+'!', t) # hello! python
 # a = "132"
 # print(type(a))
 # <class 'str'>
+
+# 016 문자열을 정수로 변환
+# 문자열 '720'를 정수형으로 변환해보세요.
+# num_str = "720"
+print(int(num_str))
+# 해설
+# num_str = "720"  #형변환
+# num_int = int(num_str)
+# print(num_int+1, type(num_int))
+
+# 017 정수를 문자열 100으로 변환
+# 정수 100을 문자열 '100'으로 변환해보세요.
+# num = 100
+print(str(num))
+# 해설
+# num = 100
+# result = str(num)
+# print(result, type(result))
+
+# 018 문자열을 실수로 변환
+# 문자열 "15.79"를 실수(float) 타입으로 변환해보세요.
+a = "15.79"
+print(float(a))
+# 해설
+# data = "15.79"
+# data = float(data)
+# print(data, type(data))
+
+# 019 문자열을 정수로 변환
+# year라는 변수가 문자열 타입의 연도를 바인딩하고 있습니다. 이를 정수로 변환한 후 최근 3년의 연도를 화면에 출력해보세요.
+# year = "2021"
+year_int = int(year)
+print(year_int - 2, year_int - 1, year_int)
+# 해설
+# year = "2020"
+# print(int(year)-3)  # 2017
+# print(int(year)-2)  # 2018
+# print(int(year)-1)  # 2019
+
+# 020 파이썬 계산
+# 에이컨이 월 48,584원에 무이자 36개월의 조건으로 홈쇼핑에서 판매되고 있습니다. 총 금액은 계산한 후 이를 화면에 출력해보세요. (변수사용하기)
+price = 48584 * 36
+print(price) # 1,749,024
+# 해설
+# 월 = 48584
+# 총금액 = 월 * 36
+# print(총금액)
