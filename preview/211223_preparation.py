@@ -149,3 +149,44 @@ print(price) # 1,749,024
 # 월 = 48584
 # 총금액 = 월 * 36
 # print(총금액)
+
+# 021 문자열 인덱싱
+# 021 문자열 인덱싱
+# letters가 바인딩하는 문자열에서 첫번째와 세번째 문자를 출력하세요.
+letters = 'python'
+print(letters[0], letters[2])
+# 해설
+# 파이썬 문자열에서 한 글자를 가져오는 것을 인덱싱이라고 부릅니다. 파이썬 인덱싱은 0부터 시작합니다.
+# lang = 'python'
+# print(lang[0], lang[2])
+
+# 022 문자열 슬라이싱
+# 자동차 번호가 다음과 같을 때 뒤에 4자리만 출력하세요.
+license_plate = "24가 2210"
+license_plate.split(' ')[1]
+# 해설
+# license_plate = "24가 2210"
+# print(license_plate[-4:])
+
+# 023 문자열 인덱싱
+# 아래의 문자열에서 '홀' 만 출력하세요.
+string = "홀짝홀짝홀짝"
+print(string[0], string[2], string[4])
+# 해설
+# 슬라이싱할 때 시작인덱스:끝인덱스:오프셋을 지정할 수 있습니다.
+# print(string[::2])
+
+# 024 문자열 슬라이싱
+# 문자열을 거꾸로 뒤집어 출력하세요.
+string = "PYTHON"
+print(string[::-1]) # NOHTYP
+# 해설
+# print(string[::-1])
+
+# 025 문자열 치환
+# 아래의 전화번호에서 하이푼 ('-')을 제거하고 출력하세요.
+phone_number = "010-1111-2222"
+print(phone_number.replace('-', ' ')) # 010 1111 2222
+# 해설
+# phone_number1 = phone_number.replace("-", " ")
+# print(phone_number1)
