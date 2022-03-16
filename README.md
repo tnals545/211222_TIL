@@ -10,6 +10,6 @@
 
 - CLI
 - Vscode
-- Markdown
+- Markdown([Notion](https://bloom-queen-d0e.notion.site/Today-Sum-Learned-64e4e511619042559f9d2532a5b028ee), Typora)
 - Git
 - Github
