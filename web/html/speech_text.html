@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Speech_Text</title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/main2.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div id="wrap">
+  <nav>
+    <ul class="nav-items">
+      <li><a href="#home">Sign up</a></li>
+      <li><a href="#news">Login</a></li>
+      <li><a href="#contact">Service center</a></li>
+    </ul>
+  </nav>
+  <header>
+    <a class='logo' href="main2.html"><img src= "logobk.png" height="150px"></a>
+  </header>
+  </div>
+
+  <nav>
+      <div class="container">
+          <ul>
+              <li> <a href="#">Smart Script<i class='fa fa-angle-down'></i></a>
+                  <ul>
+                      <li><a href="/speech_text">Smart Text</a></li>
+                      <li><a href="/speech_translation">Smart Translation</a></li>
+                      <li><a href="/speech_voice">Smart Voice</a></li>
+                  </ul>
+              </li>
+              <li><a href="/eye">Eye Detector</a></li>
+              <li><a href="/face">Face Detector</a></li>
+          </ul>
+      </div>
+      <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+      <script>
+      $('nav li').hover(
+        function() {
+          $('ul', this).stop().slideDown(200);
+        },
+        function() {
+          $('ul', this).stop().slideUp(200);
+        }
+      );
+      </script>
+  </nav>
+
+  <h1>Smart Text</h1>
+  <div class="input_center">
+    <p>이 앱은 비디오 파일의 스크립트를 추출하기에 유용합니다.<br> 이 앱은 설치가 필요하지 않고 브라우저에서 작동합니다.</p>
+    <br>
+    <br>
+    <form action="/speech/text" method="post" enctype="multipart/form-data">
+      <label class="input-file-button" for="input-file" style="font-size:15px;">
+        업로드
+      </label>
+      <input type="file" id="input-file" name='files' style="font-size:15px;">
+      <br>
+      <br>
+      <br>
+
+      <label class="input-submit-button" for="input-submit">
+        Submit
+      </label>
+      <input type="submit" id="input-submit">
+    </form>
+  </div>
+
+  <!-- <table class='hidden'>
+    <tr>
+      <td>
+        <div class="center">
+          <p>Smart Text</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>이 앱은 비디오 파일의 스크립트를 추출하기에 유용합니다. 이 앱은 설치가 필요하지 않고 브라우저에서 작동합니다.</p>
+      </td>
+    </tr>
+  </table>
+
+  <table class='hidden'>
+    <tr>
+      <td>
+        <div class="center">
+          <p>Smart Translation</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>이 앱은 비디오 파일의 번역 스크립트를 추출하기에 유용합니다. 이 앱은 설치가 필요하지 않고 브라우저에서 작동합니다.</p>
+      </td>
+    </tr>
+  </table>
+
+  <table class='hidden'>
+    <tr>
+      <td>
+        <div class="center">
+          <p>Smart Voice</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>이 앱은 영어 영상을 한국어 음성 파일로 제공합니다. 이 앱은 설치가 필요하지 않고 브라우저에서 작동합니다.</p>
+      </td>
+    </tr>
+  </table> -->
+
+
+</body>
+</html>

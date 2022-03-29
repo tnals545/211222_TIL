@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Junior Naver</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main2.css">
+</head>
+<body>
+  <div id="wrap">
+  <nav>
+    <ul class="nav-items">
+      <li><a href="#home">Sign up</a></li>
+      <li><a href="#news">Login</a></li>
+      <li><a href="#contact">Service center</a></li>
+    </ul>
+  </nav>
+  <header>
+    <a class='logo' href="main2.html"><img src= "logobk.png" height="150px"></a>
+  </header>
+  </div>
+
+  <nav>
+      <div class="container">
+          <ul>
+              <li> <a href="#">Script<i class='fa fa-angle-down'></i></a>
+                  <ul>
+                      <li><a href="/speech_text">Script text</a></li>
+                      <li><a href="/speech_translation">Script Translation</a></li>
+                      <li><a href="/speech_voice">Script Voice</a></li>
+                  </ul>
+              </li>
+              <li><a href="/eye">Eye detector</a></li>
+              <li><a href="/face">Face detector</a></li>
+          </ul>
+      </div>
+  </nav>
+
+  <a href='/speech_text'><img src="smart.png"width="100%"></a>
+  <a href='/eye'><img src="sleep.png" width="100%"></a>
+  <a href='/face'><img src="age.png"  width="100%"></a>
+
+  <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+      $('nav li').hover(
+          function() {
+              $('ul', this).stop().slideDown(200);
+          },
+          function() {
+              $('ul', this).stop().slideUp(200);
+          }
+      );
+  </script>
+
+
+</body>
+</html>
