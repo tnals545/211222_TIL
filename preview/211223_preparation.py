@@ -349,3 +349,56 @@ print(data.strip())
 # data = "   삼성전자    "
 # data1 = data.strip()
 # print(data1)
+
+# 041 upper 메서드
+# 다음과 같은 문자열이 있을 때 이를 대문자 BTC_KRW로 변경하세요.
+ticker = "btc_krw"
+
+ticker.upper()
+
+# 042 lower 메서드
+# 다음과 같은 문자열이 있을 때 이를 소문자 btc_krw로 변경하세요.
+ticker = "BTC_KRW"
+
+ticker.lower()
+
+# 043 capitalize 메서드
+# 문자열 'hello'가 있을 때 이를 'Hello'로 변경해보세요.
+a = 'hello'
+a.capitalize()
+
+# 044 endswith 메서드
+file_name = "보고서.xlsx"
+
+file_name.endswith(('xlsx', 'xls'))
+
+# 045 endswith 메서드
+file_name = "보고서.xlsx"
+
+file_name.endswith(('xlsx', 'xls'))
+# True
+
+# 046 startswith 메서드
+file_name = "2020_보고서.xlsx"
+
+file_name.startswith('2020')
+
+# 047 split 메서드
+a = "hello world"
+
+a.split(' ')
+
+# 048 split 메서드
+ticker = "btc_krw"
+
+ticker.split('_')
+
+# 049 split 메서드
+date = "2020-05-01"
+
+date.split('-')
+
+# 050 rstrip 메서드
+data = "039490     "
+
+data.rstrip()
