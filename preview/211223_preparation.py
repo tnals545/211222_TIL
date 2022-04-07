@@ -402,3 +402,22 @@ date.split('-')
 data = "039490     "
 
 data.rstrip()
+
+# 051 리스트 생성
+movie_rank = ['닥터 스트레인지', '스플릿', '럭키']
+
+# 052 리스트에 원소 추가
+movie_rank = movie_rank + ['배트맨']
+
+# 053
+movie_rank = ['닥터 스트레인지', '스플릿', '럭키', '배트맨']
+movie_rank.insert(1, '슈퍼맨')
+print(movie_rank)
+
+# 054
+del movie_rank[3]
+print(movie_rank)
+
+# 055
+del movie_rank[2:]
+print(movie_rank)
