@@ -7,18 +7,22 @@
 - 1일 1커밋을 목표로 합니다.
 <br>
 <br>
+
 ## My Study List
 ### Python
 - Vscode
 - Jupyter notebook
 - Colab
 <br>
+
 ### Front-End
 - HTML
 - CSS
 - JavaScript
 <br>
+
 ### Back-End
 - Node.js
 <br>
+
 ### Crawling
