@@ -1,5 +1,8 @@
 # 001 print 기초
 # 화면에 Hello World 문자열을 출력하세요.
+from audioop import avg
+
+
 print("Hello World") # 정답
 
 # 002 print 기초
@@ -421,3 +424,30 @@ print(movie_rank)
 # 055
 del movie_rank[2:]
 print(movie_rank)
+
+# 56
+lang1 = ["C", "C++", "JAVA"]
+lang2 = ["Python", "Go", "C#"]
+
+langs = lang1 + lang2
+print(langs)
+
+# 57
+nums = [1, 2, 3, 4, 5, 6, 7]
+min(nums)
+max(nums)
+
+# 58
+nums = [1, 2, 3, 4, 5]
+sum(nums)
+
+# 59
+cook = ["피자", "김밥", "만두", "양념치킨", "족발", "피자", "김치만두",
+        "쫄면", "소시지", "라면", "팥빙수", "김치전"]
+
+len(cook)
+
+# 60
+nums = [1, 2, 3, 4, 5]
+
+np.mean(nums)
