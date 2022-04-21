@@ -502,3 +502,47 @@ data = [2, 4, 3, 1, 5, 10, 9]
 
 data.sort()
 data
+
+# 71
+my_variable = ()
+
+my_variable
+
+# 72
+movie_rank = ('닥터 스트레인지', '스플릿', '럭키')
+
+movie_rank
+
+# 73
+num = (1)
+
+num
+
+# 74
+# 튜플은 변수에 내용이 입력되면 변경할 수 없다.
+
+# 75
+t = 1, 2, 3, 4
+
+type(t)
+
+# 76
+t = ('a', 'b', 'c')
+
+# 77
+interest = ('삼성전자', 'LG전자', 'SK Hynix')
+
+list(interest)
+
+# 78
+interest = ['삼성전자', 'LG전자', 'SK Hynix']
+
+tuple(interest)
+
+# 79
+temp = ('apple', 'banana', 'cake')
+a, b, c = temp
+print(a, b, c)
+
+# 80
+tuple(range(2, 100, 2))
