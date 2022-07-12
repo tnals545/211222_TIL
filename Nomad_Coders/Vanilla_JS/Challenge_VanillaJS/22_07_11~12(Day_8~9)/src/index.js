@@ -8,7 +8,7 @@ const winOrlost = document.querySelector("#win-lost");
 function btnClick() {
   const range = rangeInput.value;
   let machineChose = Math.round(Math.random() * range);
-  const guess = guessInput.value;
+  const guess = parseInt(guessInput.value);
   greeting.innerText = `You chose: ${guess}, the machine chose: ${machineChose}.`;
   if (guess === machineChose) {
     winOrlost.innerText = "You won!";
