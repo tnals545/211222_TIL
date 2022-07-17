@@ -11,29 +11,28 @@
 </head>
 
 <body>
-    <h2 id="clock">00:00:00</h2>
+    <span id="clock">00:00:00</span>
     <form class="hidden" id="login-form">
         <input required maxlength="15" type="text" placeholder="What is your name?" />
-        <input type="submit" value="Log In" />
     </form>
-    <h1 id="greeting" class="hidden"></h1>
+    <span id="greeting" class="hidden"></span>
+    <div id="quote" class="item-group" xyz="fade">
+        <button id="logout-delete" type="button"><img class="hidden" src="./img/x.png" /></button>
+    </div>
     <form id="todo-form">
         <input type="text" placeholder="Write a To Do and Press Enter" required>
     </form>
     <ul id="todo-list"></ul>
-    <div id="quote">
-        <span></span>
-        <br>
-        <span></span>
-    </div>
     <div id="weather">
         <span></span>
         <span></span>
     </div>
-    <!-- <div id="quote" class="item-group" xyz="fade up">
-        <div class="xyz-in" xyz="fade up big"></div>
-        <div class="xyz-out" xyz="fade up big"></div>
-    </div> -->
+    <div id="quote" class="item-group" xyz="fade">
+        <strong>
+            <div></div>
+            <div class="xyz-out"></div>
+        </strong>
+    </div>
 
     <script src="src/greetings.js"></script>
     <script src="src/clock.js"></script>

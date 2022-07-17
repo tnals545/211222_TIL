@@ -42,9 +42,22 @@ const quotes = [
   },
 ];
 
-const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
+const quote = document.querySelector("#quote strong div:first-child");
+const author = document.querySelector("#quote strong div:last-child");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+quote.innerText = `" ${todaysQuote.quote} "`;
+
+function mouseEnter() {
+  author.innerText = todaysQuote.author;
+  author.classList.add("xyz-in");
+  author.classList.remove("xyz-out");
+}
+
+function mouseLeave() {
+  author.classList.add("xyz-out");
+  author.classList.remove("xyz-in");
+}
+
+quote.addEventListener("mouseenter", mouseEnter);
+quote.addEventListener("mouseleave", mouseLeave);

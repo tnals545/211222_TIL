@@ -28,10 +28,14 @@ body {
   transform: translate(-50%, -50%);
 }
 
+#greeting {
+  font-size: 75px;
+}
+
 #login-form,
 #greeting {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -39,34 +43,48 @@ body {
 
 #weather {
   position: absolute;
-  top: 5%;
+  top: 10%;
   left: 90%;
   transform: translate(-50%, -50%);
   color: white;
+  font-size: 25px;
 }
 
-/* #quote {
+#quote strong div:first-child {
   position: absolute;
-  top: 90%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-} */
+  font-size: 20px;
+}
 
-#quote span {
+#quote strong div:last-child {
   position: absolute;
-  top: 90%;
+  top: 87%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 100%);
   color: white;
 }
 
-#todo-list,
 #todo-form {
   position: absolute;
-  top: 90%;
-  left: 90%;
+  top: 10%;
+  left: 10%;
   transform: translate(-50%, -50%);
+  color: white;
+}
+
+#todo-form input {
+  width: 200px;
+  height: 42px;
+  padding-left: 15px;
+}
+
+#todo-list {
+  position: absolute;
+  top: 15%;
+  left: 6%;
   color: white;
 }
 
@@ -76,12 +94,39 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  font-size: 150px;
 }
 
-.item-group {
-  position: absolute;
-  top: 45%;
+#login-form input,
+#todo-form input {
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+
+#login-form input {
+  width: 400px;
+  height: 70px;
+  text-align: center;
+  font-size: x-large;
+}
+
+#logout-delete {
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+  transform: translate(-50%, 100%);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: absolute;
+}
+
+#logout-delete img {
+  width: 70px;
+  height: 70px;
+}
+
+.todo-button {
+  width: 20px;
+  height: 20px;
 }
