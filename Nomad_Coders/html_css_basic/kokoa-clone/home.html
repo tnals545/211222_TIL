@@ -4,6 +4,10 @@
 <head>
     <title>The Sumin Times</title>
     <style>
+        * {
+            border: 2px dashed black;
+        }
+
         html {
             background-color: tomato;
         }
@@ -15,7 +19,7 @@
         }
 
         div {
-            padding: 10px;
+            padding: 20px;
         }
 
         #first {
@@ -36,10 +40,8 @@
             height: 50px;
         }
 
-        #fourth {
-            background-color: blanchedalmond;
-            width: 25px;
-            height: 25px;
+        span {
+            border-style: dotted;
         }
     </style>
 </head>
@@ -48,7 +50,9 @@
     <div id="first">
         <div id="second">
             <div id="third">
-                <div id="fourth"></div>
+                <span>
+                    hello
+                </span>
             </div>
         </div>
     </div>
