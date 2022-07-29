@@ -5,32 +5,29 @@
     <title>The Sumin Times</title>
     <style>
         body {
+            height: 100vh;
             margin: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .btn {
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-
-        .tomato {
-            background-color: tomato;
-            color: white;
-        }
-
-        .teal {
+        div {
+            width: 100px;
+            height: 100px;
             background-color: teal;
+        }
+
+        #second {
+            background-color: wheat;
         }
     </style>
 </head>
 
 <body>
-    <span class="btn teal">hello</span>
-    <span class="btn tomato">hello</span>
-    <span class="btn teal">hello</span>
-    <span class="btn tomato">hello</span>
-    <span class="btn teal">hello</span>
-    <span class="btn tomato">hello</span>
+    <div></div>
+    <div id="second"></div>
+    <div></div>
 </body>
 
 </html>
