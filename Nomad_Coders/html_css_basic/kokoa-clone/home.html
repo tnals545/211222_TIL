@@ -15,26 +15,27 @@
             border-radius: 10px;
         }
 
-        p span {
-            color: white;
+        input {
+            border: 1px solid wheat;
         }
 
-        p>span {
-            background-color: teal;
+        input:required {
+            border-color: tomato;
         }
 
-        p+span {
-            text-decoration: underline;
+        input[placeholder~="name"] {
+            background-color: pink;
         }
     </style>
 </head>
 
 <body>
     <div>
-        <p>This world is but canvas to our imaginations.
-            Life begins at the end of your comfort zone.<span>inside</span>
-        </p>
-        <span>hello</span>
+        <form>
+            <input type="text" placeholder="First name" />
+            <input type="text" placeholder="Last name" />
+            <input type="password" required placeholder="password" />
+        </form>
     </div>
 </body>
 
