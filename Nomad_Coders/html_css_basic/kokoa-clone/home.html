@@ -9,34 +9,33 @@
             margin: 50px;
         }
 
-        div {
-            width: 100px;
-            height: 100px;
-            background-color: wheat;
-            position: relative;
-        }
-
         span {
-            background-color: tomato;
+            background-color: yellowgreen;
+            padding: 5px;
+            border-radius: 10px;
         }
 
-        span:nth-child(3n + 1) {
+        p span {
+            color: white;
+        }
+
+        p>span {
             background-color: teal;
+        }
+
+        p+span {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
-    <span>hello</span>
+    <div>
+        <p>This world is but canvas to our imaginations.
+            Life begins at the end of your comfort zone.<span>inside</span>
+        </p>
+        <span>hello</span>
+    </div>
 </body>
 
 </html>
