@@ -4,6 +4,11 @@
 <head>
     <title>The Sumin Times</title>
     <style>
+        :root {
+            --main-color: #2477ad;
+            --default-border: 1px solid var(--main-color);
+        }
+
         body {
             height: 1000vh;
             margin: 50px;
@@ -15,10 +20,13 @@
             border-radius: 10px;
         }
 
-        p::first-line {
-            color: white;
-            font-size: 50px;
-            background-color: yellowgreen;
+        p {
+            background-color: var(--main-color);
+        }
+
+        a {
+            color: var(--main-color);
+            border: var(--default-border);
         }
     </style>
 </head>
@@ -27,6 +35,9 @@
     <p>
         dsadsadasdasdasdasd. dsadasdsadasds
     </p>
+    <div>
+        <a href="#">website</a>
+    </div>
 </body>
 
 </html>
