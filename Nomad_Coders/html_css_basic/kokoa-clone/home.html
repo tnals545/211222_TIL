@@ -4,14 +4,20 @@
 <head>
     <title>The Sumin Times</title>
     <style>
+        @keyframes superSexyCoinFlip {
+            from {
+                transform: rotateY(0);
+            }
+
+            to {
+                transform: rotateY(180deg) translateX(100px);
+            }
+        }
+
         img {
             border: 10px solid black;
             border-radius: 50%;
-            transition: transform 2s ease-in-out;
-        }
-
-        img:hover {
-            transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+            animation: superSexyCoinFlip 5s ease-in-out infinite;
         }
     </style>
 </head>
