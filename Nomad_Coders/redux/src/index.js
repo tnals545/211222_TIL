@@ -9,4 +9,3 @@ const countModifier = (count = 0) => {
 };
 
 const countStore = createStore(countModifier);
-console.log(countStore.getState());
