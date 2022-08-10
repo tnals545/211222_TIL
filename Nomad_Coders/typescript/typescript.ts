@@ -1,5 +1,9 @@
+let a = "hello";
+let b: boolean = false;
+let c: number[] = [];
+c.push(1);
 const player = {
-  age: 12,
+  name: "nico",
 };
 
-player.age = false;
+player.name = 1;
