@@ -1,3 +1,17 @@
-type Add = (a: number, b: number) => number;
+type Config = {
+  path: string;
+  state: object;
+};
 
-const add: Add = (a, b) => a + b;
+type Push = {
+  (path: string): void;
+  (config: Config): void;
+};
+
+const push: Push = (config) => {
+  if (typeof config === "string") {
+    console.log(config);
+  } else {
+    console.log(config.path, config.state);
+  }
+};
