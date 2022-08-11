@@ -1,9 +1,3 @@
-function hello(name: string | number) {
-  if (typeof name === "string") {
-    name;
-  } else if (typeof name === "number") {
-    name;
-  } else {
-    name;
-  }
-}
+type Add = (a: number, b: number) => number;
+
+const add: Add = (a, b) => a + b;
