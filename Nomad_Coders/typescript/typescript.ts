@@ -1,17 +1,10 @@
-type Config = {
-  path: string;
-  state: object;
+type SuperPrint = {
+  <T>(arr: T[]): T;
 };
 
-type Push = {
-  (path: string): void;
-  (config: Config): void;
-};
+const superPrint: SuperPrint = (arr) => arr[0];
 
-const push: Push = (config) => {
-  if (typeof config === "string") {
-    console.log(config);
-  } else {
-    console.log(config.path, config.state);
-  }
-};
+const a = superPrint([1, 2, 3, 4]);
+const b = superPrint([true, false, true]);
+const c = superPrint(["a", "b", "c"]);
+const d = superPrint([1, 2, true, false, "hello"]);
