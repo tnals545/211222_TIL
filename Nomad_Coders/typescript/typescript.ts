@@ -1,28 +1,22 @@
-type Player<E> = {
-  name: string;
-  extraInfo: E;
-};
+abstract class User {
+  constructor(
+    protected firstName: string,
+    protected lastName: string,
+    protected nickName: string
+  ) {}
+  abstract getNickName(): void;
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
 
-type NicoExtra = {
-  favFood: string;
-};
-type NicoPlayer = Player<NicoExtra>;
+class Player extends User {
+  getNickName() {
+    console.log(this.nickName);
+  }
+}
 
-const nico: NicoPlayer = {
-  name: "nico",
-  extraInfo: {
-    favFood: "kimchi",
-  },
-};
+const nico = new Player("nico", "las", "니코");
 
-const lynn: Player<null> = {
-  name: "lynn",
-  extraInfo: null,
-};
-
-// array를 다른 방식으로 선언
-type A = Array<number>; // == number[]
-
-let a: A = [1, 2, 3, 4];
-
-function printAllNumbers(arr: Array<number>) {}
+nico.nickname;
+nico.getFullName();
