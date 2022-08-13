@@ -1,10 +1,28 @@
-type SuperPrint = {
-  <T>(arr: T[]): T;
+type Player<E> = {
+  name: string;
+  extraInfo: E;
 };
 
-const superPrint: SuperPrint = (arr) => arr[0];
+type NicoExtra = {
+  favFood: string;
+};
+type NicoPlayer = Player<NicoExtra>;
 
-const a = superPrint([1, 2, 3, 4]);
-const b = superPrint([true, false, true]);
-const c = superPrint(["a", "b", "c"]);
-const d = superPrint([1, 2, true, false, "hello"]);
+const nico: NicoPlayer = {
+  name: "nico",
+  extraInfo: {
+    favFood: "kimchi",
+  },
+};
+
+const lynn: Player<null> = {
+  name: "lynn",
+  extraInfo: null,
+};
+
+// array를 다른 방식으로 선언
+type A = Array<number>; // == number[]
+
+let a: A = [1, 2, 3, 4];
+
+function printAllNumbers(arr: Array<number>) {}
