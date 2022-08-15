@@ -1,26 +1,38 @@
-type Team = "red" | "blue" | "yellow";
-type Health = 1 | 5 | 10;
-
-type Player = {
-  nickname: string;
-  team: Team;
-  health: Health;
-};
-
-interface Person {
-  nickname: string;
-  team: Team;
-  health: Health;
+interface User {
+  firstName: string;
+  lastName: string;
+  sayHi(name: string): string;
+  fullName(): string;
+}
+interface Human {
+  health: number;
 }
 
-const nico: Player = {
-  nickname: "nico",
-  team: "yellow",
-  health: 10,
-};
+class Player implements User, Human {
+  constructor(
+    public firstName: string,
+    public lastName: string,
+    public health: number
+  ) {}
+  fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+  sayHi(name: string) {
+    return `Hello ${name}. My name is ${this.fullName}`;
+  }
+}
 
-const nico: Player = {
-  nickname: "nico",
-  team: "yellow",
-  health: 10,
-};
+function makeUser(user: User): User {
+  return {
+    firstName: "nico",
+    lastName: "las",
+    fullName: () => "xx",
+    sayHi: (name) => "string",
+  };
+}
+makeUser({
+  firstName: "nico",
+  lastName: "las",
+  fullName: () => "xx",
+  sayHi: (name) => "string",
+});
