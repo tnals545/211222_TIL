@@ -6,6 +6,10 @@
 </body>
 <script src="https://unpkg.com/react@18.0.0/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@18.0.0/umd/react-dom.production.min.js"></script>
-
+<script>
+    const root = document.getElementById("root");
+    const span = React.createElement("span", { id: "sexy-span", style: { color: "red" } }, "Hello I'm a span");
+    ReactDOM.render(span, root);
+</script>
 
 </html>
