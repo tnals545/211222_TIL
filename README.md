@@ -21,6 +21,9 @@
 - HTML
 - CSS
 - JavaScript
+- TypeScript
+- Next.js
+- Redux
 <br>
 
 ### Back-End
