@@ -6,13 +6,14 @@ const toDos = createSlice({
   reducers: {
     add: (state, action) => {
       state.push({ text: action.payload, id: Date.now() });
+      console.log(action.payload);
     },
     remove: (state, action) =>
       state.filter((toDo) => toDo.id !== action.payload),
   },
 });
 
-console.log(toDos.reducer);
+console.log(toDos.actions.payload);
 
 export const { add, remove } = toDos.actions;
 
