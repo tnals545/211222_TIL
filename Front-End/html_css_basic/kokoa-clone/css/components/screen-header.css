@@ -17,7 +17,7 @@
 .screen-header__icons {
   position: relative;
 }
-.screen-header__new-gear {
+.screen-header__new-find {
   background-color: tomato;
   width: 7px;
   height: 7px;
@@ -27,5 +27,17 @@
   align-items: center;
   position: absolute;
   left: 95px;
+  bottom: 20px;
+}
+.screen-header__new-more {
+  background-color: tomato;
+  width: 7px;
+  height: 7px;
+  border-radius: 3.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 145px;
   bottom: 20px;
 }
