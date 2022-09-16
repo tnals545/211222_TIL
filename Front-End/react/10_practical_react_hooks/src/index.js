@@ -1,18 +1,12 @@
 import React, { StrictMode, useState } from "react";
 import { createRoot } from "react-dom/client";
+import { useInput } from "./useInput";
 
 import "./styles.css";
 
-const useInput = (initialValue) => {
-  const [value, setValue] = useState(initialValue);
-  const onChange = (event) => {
-    console.log(event.target);
-  };
-  return { value, onChange };
-};
-
 const App = () => {
-  const name = useInput("Mr.");
+  const maxLen = (value) => !value.includes("@");
+  const name = useInput("Mr.", maxLen);
   return (
     <div className="App">
       <h1>Hello</h1>
