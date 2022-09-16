@@ -1,12 +1,19 @@
-export const useConfirm = (message = "", callback, rejection) => {
-  if (typeof callback !== "function") {
+export const useConfirm = (message = "", onConfirm, onCancel) => {
+  if (typeof onConfirm !== "function") {
+    return;
+  }
+  if (onCancel && typeof onCancel !== "function") {
     return;
   }
   const confirmAction = () => {
     if (window.confirm(message)) {
-      callback();
+      onConfirm();
     } else {
-      rejection();
+      try {
+        onCancel();
+      } catch (error) {
+        return;
+      }
     }
   };
   return confirmAction;
