@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import { createRoot } from "react-dom/client";
+import React, { useEffect, useRef } from "react";
 
 // React 16.8v
-const useClick = (onClick) => {
+export const useClick = (onClick) => {
   const element = useRef();
   useEffect(() => {
     if (typeof onClick !== "function") {
@@ -23,18 +22,3 @@ const useClick = (onClick) => {
   }, []); // [] => dependency
   return typeof onClick !== "function" ? undefined : element;
 };
-
-const App = () => {
-  const sayHello = () => console.log("say hello");
-  const title = useClick(sayHello);
-  return (
-    <div className="App">
-      <h1 ref={title}>Hi</h1>
-    </div>
-  );
-};
-
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
-
-root.render(<App />);
