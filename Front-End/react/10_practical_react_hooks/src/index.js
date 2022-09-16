@@ -1,16 +1,27 @@
 import React, { StrictMode, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { useInput } from "./useInput";
 
-import "./styles.css";
+import { useTabs } from "./useTabs";
+
+const content = [
+  {
+    tab: "Section 1",
+    content: "Im the content of the Section 1",
+  },
+  {
+    tab: "Section 2",
+    content: "Im the content of the Section 2",
+  },
+];
 
 const App = () => {
-  const maxLen = (value) => !value.includes("@");
-  const name = useInput("Mr.", maxLen);
+  const { currentItem, changeItem } = useTabs(0, content);
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <input placeholder="Name" {...name} />
+      {content.map((section, index) => (
+        <button onClick={() => changeItem(index)}>{section.tab}</button>
+      ))}
+      <div>{currentItem.content}</div>
     </div>
   );
 };
