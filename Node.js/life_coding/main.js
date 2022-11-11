@@ -3,6 +3,7 @@ var fs = require("fs");
 var url = require("url");
 var qs = require("querystring");
 var template = require("./lib/template.js");
+var path = require("path");
 
 var app = http.createServer(function (request, response) {
   var _url = request.url;
@@ -26,8 +27,9 @@ var app = http.createServer(function (request, response) {
       });
     } else {
       fs.readdir("./data", function (error, filelist) {
+        var filteredId = path.parse(queryData.id).base;
         fs.readFile(
-          `data/${queryData.id}`,
+          `data/${filteredId}`,
           "utf-8",
           function (error, description) {
             var title = queryData.id;
@@ -89,16 +91,14 @@ var app = http.createServer(function (request, response) {
     });
   } else if (pathName == "/update") {
     fs.readdir("./data", function (error, filelist) {
-      fs.readFile(
-        `data/${queryData.id}`,
-        "utf-8",
-        function (error, description) {
-          var title = queryData.id;
-          var list = template.list(filelist);
-          var html = template.HTML(
-            title,
-            list,
-            `
+      var filteredId = path.parse(queryData.id).base;
+      fs.readFile(`data/${filteredId}`, "utf-8", function (error, description) {
+        var title = queryData.id;
+        var list = template.list(filelist);
+        var html = template.HTML(
+          title,
+          list,
+          `
             <form action="/update_process" method="post">
             <input type="hidden" name="id" value="${title}" />
               <p><input type="text" name="title" placeholder="title" value="${title}" /></p>
@@ -110,12 +110,11 @@ var app = http.createServer(function (request, response) {
               </p>
             </form>
             `,
-            `<a href="/create">create</a> <a href="/update?id=${title}">update</a>`
-          );
-          response.writeHead(200);
-          response.end(html);
-        }
-      );
+          `<a href="/create">create</a> <a href="/update?id=${title}">update</a>`
+        );
+        response.writeHead(200);
+        response.end(html);
+      });
     });
   } else if (pathName == "/update_process") {
     var body = "";
@@ -142,7 +141,8 @@ var app = http.createServer(function (request, response) {
     request.on("end", function () {
       var post = qs.parse(body);
       var id = post.id;
-      fs.unlink(`data/${id}`, function (err) {
+      var filteredId = path.parse(id).base;
+      fs.unlink(`data/${filteredId}`, function (err) {
         response.writeHead(302, { Location: `/` });
         response.end("success");
       });
