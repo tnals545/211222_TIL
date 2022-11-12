@@ -1,4 +1,4 @@
-var mysql = require("./lib/db");
+var mysql = require("mysql");
 var db = mysql.createConnection({
   host: "localhost",
   user: "root",
