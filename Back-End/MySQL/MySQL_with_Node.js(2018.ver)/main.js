@@ -45,7 +45,6 @@ var app = http.createServer(function (request, response) {
             if (err2) {
               throw err2;
             }
-            console.log(topic);
             var title = topic[0].title;
             var description = topic[0].description;
             var list = template.list(topics);
@@ -72,26 +71,31 @@ var app = http.createServer(function (request, response) {
     }
   } else if (pathname === "/create") {
     db.query(`SELECT * FROM topic`, function (err, topics) {
-      var title = "Create";
-      var list = template.list(topics);
-      var html = template.HTML(
-        title,
-        list,
-        `
-        <form action="/create_process" method="post">
-          <p><input type="text" name="title" placeholder="title"></p>
-          <p>
-            <textarea name="description" placeholder="description"></textarea>
-          </p>
-          <p>
-            <input type="submit">
-          </p>
-        </form>
-      `,
-        `<a href="/create">create</a>`
-      );
-      response.writeHead(200);
-      response.end(html);
+      db.query(`SELECT * FROM author`, function (err2, authors) {
+        var title = "Create";
+        var list = template.list(topics);
+        var html = template.HTML(
+          title,
+          list,
+          `
+          <form action="/create_process" method="post">
+            <p><input type="text" name="title" placeholder="title"></p>
+            <p>
+              <textarea name="description" placeholder="description"></textarea>
+            </p>
+            <p>
+              ${template.authorSelect(authors)}
+            </p>
+            <p>
+              <input type="submit">
+            </p>
+          </form>
+        `,
+          `<a href="/create">create</a>`
+        );
+        response.writeHead(200);
+        response.end(html);
+      });
     });
   } else if (pathname === "/create_process") {
     var body = "";
@@ -103,7 +107,7 @@ var app = http.createServer(function (request, response) {
 
       db.query(
         `INSERT INTO topic (title, description, created, author_id) VALUES(?, ?, NOW(), ?);`,
-        [post.title, post.description, 1],
+        [post.title, post.description, post.author],
         function (err, result) {
           if (err) {
             throw err;
