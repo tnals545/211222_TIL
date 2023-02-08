@@ -4,3 +4,5 @@ export const COLUMN_NAMES = {
   AWAITING_REVIEW: "Awaiting review",
   DONE: "Done",
 };
+
+export const ITEM_TYPE = "BOARD_VIEW";
